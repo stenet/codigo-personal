@@ -1,0 +1,24 @@
+codigo-container {
+  position: relative;
+  display: block;
+  margin: 25px;
+  padding: 40px 25px;
+  width: 100%;
+  max-width: 900px;
+  background: linear-gradient(180deg, #efefef, white 50vh);
+  box-shadow: 0 0 10px 0 #aaa;
+
+  > * + *::before {
+    display: block;
+    content: "";
+    border-top: 1px dashed #eee;
+    margin-top: 25px;
+    padding-top: 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  codigo-container {
+    margin: 0;
+  }
+}

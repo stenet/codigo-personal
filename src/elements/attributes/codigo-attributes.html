@@ -1,0 +1,12 @@
+<template>
+  <import from="../tag/codigo-tag"></import>
+
+  <h2>
+    Attribute
+  </h2>
+  <div class="codigo__tag-list">
+    <template repeat.for="attribute of info.attributes">
+      <codigo-tag text.bind="attribute" background-color="#74BADE"></codigo-tag>
+    </template>
+  </div>
+</template>

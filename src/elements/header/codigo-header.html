@@ -1,0 +1,35 @@
+<template>
+  <import from="../avatar/codigo-avatar"></import>
+  <import from="../tag/codigo-tag"></import>
+
+  <codigo-avatar image-url="./resources/me.jpg"></codigo-avatar>
+
+  <h1>Servus, ich bin Stefan</h1>
+  <div class="codigo__tag-list center">
+    <codigo-tag text.bind="info.profession" background-color="#E25E5B"></codigo-tag>
+    <codigo-tag text.bind="info.country" background-color="#F8CB30"></codigo-tag>
+  </div>
+  <div>
+    <p>
+      Mein Name ist Stefan, ich bin Jahrgang 1982 und seit 2001 Hauptberuflich Softwareentwickler.
+    </p>
+    <p>
+      Zuhause bin ich in Lustenau, Österreich - nahe der Schweizer Grenze.
+    </p>
+    <p>
+      Angefangen mit der Entwicklung von Software habe ich mit Gupta SQLWindows. Ab ca. 2007 kam dann immer mehr .NET/C# und seit 2013 zusätzlich die Entwicklung von Web-Apps bzw. SPAs. Dafür verwende ich im Backend hauptsächlich ASP.NET und im Frontend Aurelia.
+    </p>
+    <p>
+      Programmieren ist für mich nicht nur eine Aneinanderreihung von Buchstaben & Funktionen, sondern eine äußerst kreative Arbeit. Dabei lege ich sehr viel Wert auf Clean Coding und Architekturen, die verlässlich, erweiterbar und sicher sind.
+    </p>
+    <p>
+      2013 habe ich eine kleine Auszeit gemacht und war für etwas mehr als ein Jahr in Barcelona, um spanisch zu lernen.
+    </p>
+    <p>
+      Seit Februar 2020 bin ich "Microsoft Certified: Azure Developer Associate".
+    </p>
+    <p>
+      Per Email bin ich unter "stefan".concat("@").concat("codigo.at") erreichbar.
+    </p>
+  </div>
+</template>

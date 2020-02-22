@@ -1,0 +1,22 @@
+<template>
+  <div class="codigo__blog-header">
+    <h2>
+      Blog
+    </h2>
+    <input type="search" placeholder="Suchen ..." value.bind="search & debounce:600" />
+  </div>  
+  <div class="codigo__blog-list">
+    <template repeat.for="post of posts">
+      <div class="codigo__blog-item">
+        <h3>
+          ${post.title.rendered} vom ${post.date | dateToString}
+        </h3>
+        <div innerhtml.bind="post.content.rendered">
+        </div>
+      </div>
+    </template>
+  </div>
+  <div if.bind="showLoadMore">
+    <button click.delegate="onLoadMoreClick()" disabled.bind="isLoading">Weitere Posts laden</button>
+  </div>
+</template>

@@ -1,0 +1,9 @@
+<template>
+  <div class="codigo-socials">
+    <template repeat.for="social of info.socials">
+      <button click.delegate="onSocialClick(social)" title.bind="social.name">
+        <i class="${social.icon}"></i>
+      </button>
+    </template>
+  </div>
+</template>

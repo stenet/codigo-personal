@@ -1,0 +1,12 @@
+<template>
+  <import from="../skill/codigo-skill"></import>
+
+  <h2>
+    Skills & Interessen
+  </h2>
+  <div class="codigo__skill-list">
+    <template repeat.for="skill of info.skills">
+      <codigo-skill name.bind="skill.name" level.bind="skill.level"></codigo-skill>
+    </template>
+  </div>
+</template>

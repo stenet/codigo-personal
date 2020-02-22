@@ -1,0 +1,51 @@
+{
+  "name": "Stefan Heim",
+  "birthdate": "1982-04-23T00:00:00.000",
+  "profession": "Softwareentwickler",
+  "country": "Austria",
+  "attributes": [
+    "analytisch",
+    "tolerant",
+    "offen",
+    "zuverlässig",
+    "kreativ",
+    "genau",
+    "kritikfähig",
+    "wissenshungrig",
+    "begeisterungsfähig",
+    "höflich",
+    "manchmal launisch"
+  ],
+  "languages": [
+    { "name": "Deutsch", "level": 10 },
+    { "name": "Englisch", "level": 7 },
+    { "name": "Spanisch", "level": 7 }
+  ],
+  "wordpressUrl": "https://wp.codigo.at",
+  "skills": [
+    { "name": "C#", "level": 10 },
+    { "name": "Aurelia", "level": 10 },
+    { "name": "SQL-Server", "level": 8 },
+    { "name": "Oracle", "level": 6 },
+    { "name": "TypeScript", "level": 8 },
+    { "name": "Azure", "level": 8 },
+    { "name": "Docker", "level": 8 },
+    { "name": "Kubernetes", "level": 4 },
+    { "name": "Webpack", "level": 7 },
+    { "name": "PWA", "level": 7 },
+    { "name": "nodejs", "level": 6 },
+    { "name": "DevExpress", "level": 9 },
+    { "name": "Clean Coding", "level": 10 }
+  ],
+  "socials": [
+    { "name": "Linkedin", "url": "https://www.linkedin.com/in/stefan-heim-61834612/", "icon": "fab fa-linkedin" },
+    { "name": "Xing", "url": "https://www.xing.com/profile/Stefan_Heim8/cv", "icon": "fab fa-xing" },
+    { "name": "Twitter", "url": "https://twitter.com/codigoat", "icon": "fab fa-twitter" },
+    { "name": "Instagram", "url": "http://instagram.com/stefanat1982", "icon": "fab fa-instagram" },
+    { "name": "GitHub", "url": "https://github.com/stenet", "icon": "fab fa-github" },
+    { "name": "Blog", "url": "https://wp.codigo.at", "icon": "fas fa-blog" }
+  ],
+  "links": [
+    { "name": "", "url": "" }
+  ]
+}

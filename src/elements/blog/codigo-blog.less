@@ -1,0 +1,42 @@
+.codigo__blog-item {
+  img {
+    max-width: 100%;
+  }
+  .wp-block-code {
+    padding: 0.75em;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    background-color: #eee;
+  }
+  a {
+    word-break: break-all;
+  }
+  code {
+    font-size: 0.8em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  p, ul, ol, li {
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+
+  + .codigo__blog-item {
+    margin-top: 50px;
+  }
+}
+.codigo__blog-header {
+  display: flex;
+  align-items: center;
+
+  > *:first-child {
+    flex-grow: 1;
+  }
+}

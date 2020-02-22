@@ -2,12 +2,16 @@
   <import from="../avatar/codigo-avatar"></import>
   <import from="../tag/codigo-tag"></import>
 
-  <codigo-avatar image-url="./resources/me.jpg"></codigo-avatar>
-
-  <h1>Servus, ich bin Stefan</h1>
-  <div class="codigo__tag-list center">
-    <codigo-tag text.bind="info.profession" background-color="#E25E5B"></codigo-tag>
-    <codigo-tag text.bind="info.country" background-color="#74BADE"></codigo-tag>
+  <div class="codigo-header__avatar-text">
+    <codigo-avatar image-url="./resources/me.jpg"></codigo-avatar>
+    <div>
+      <h1>Servus, ich bin Stefan</h1>
+      
+      <div class="codigo__tag-list">
+        <codigo-tag text.bind="info.profession" background-color="#5BCF80"></codigo-tag>
+        <codigo-tag text.bind="info.country" background-color="#74BADE"></codigo-tag>
+      </div>
+    </div>
   </div>
   <div>
     <p>

@@ -1,9 +1,46 @@
 codigo-header {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
 
-  > * + *, > h1, > .codigo__tag-list {
+  > * + * {
     margin-top: 25px;
+  }
+}
+.codigo-header__avatar-text {
+  display: flex;
+  align-items: center;
+  margin: -40px -25px -5px -25px;
+  padding: 40px 25px 25px 25px;
+  border-bottom: 1px solid #ddd;
+  min-height: 300px;
+  background-image: url(resources/kaktus.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: contain;
+  background-color: #ECE8E5;
+
+  codigo-avatar {
+    margin-right: 25px;
+  }
+
+  h1 {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .codigo-header__avatar-text {
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+
+    codigo-avatar {
+      margin-right: 0;
+      margin-bottom: 25px;
+    }
   }
 }

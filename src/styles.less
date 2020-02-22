@@ -10,6 +10,10 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   margin: 0;
 }
+p {
+  line-height: 1.5em;
+  color: #666;
+}
 button {
   appearance: none;
   background-color: #efefef;
@@ -29,4 +33,16 @@ button {
 input, textarea, select {
   appearance: none;
   padding: 5px 10px;
+}
+a {
+  color: black;
+  text-decoration: initial;
+  text-decoration-color: initial;
+
+  &:active {
+    color: initial;
+  }
+  &:focus {
+    color: initial;
+  }
 }

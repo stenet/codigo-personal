@@ -9,7 +9,7 @@
     <template repeat.for="post of posts">
       <div class="codigo__blog-item">
         <h3>
-          ${post.title.rendered} vom ${post.date | dateToString}
+          <a href.bind="post.link" target="_blank">${post.title.rendered} vom ${post.date | dateToString}</a>
         </h3>
         <div innerhtml.bind="post.content.rendered">
         </div>

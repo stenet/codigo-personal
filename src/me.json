@@ -24,6 +24,7 @@
   "wordpressUrl": "https://wp.codigo.at",
   "skills": [
     { "name": "C#", "level": 10 },
+    { "name": "ASP.NET Core", "level": 8 },
     { "name": "Aurelia", "level": 10 },
     { "name": "SQL-Server", "level": 8 },
     { "name": "Oracle", "level": 6 },
@@ -35,7 +36,8 @@
     { "name": "PWA", "level": 7 },
     { "name": "nodejs", "level": 6 },
     { "name": "DevExpress", "level": 9 },
-    { "name": "Clean Coding", "level": 10 }
+    { "name": "Clean Coding", "level": 10 },
+    { "name": "Git", "level": 9 }
   ],
   "socials": [
     { "name": "Linkedin", "url": "https://www.linkedin.com/in/stefan-heim-61834612/", "icon": "fab fa-linkedin" },

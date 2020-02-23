@@ -3,14 +3,22 @@
     <h2>
       Blog
     </h2>
-    <input type="search" placeholder="Suchen ..." value.bind="search & debounce:600" />
+    <input placeholder="Suchen ..." value.bind="search & debounce:600" />
   </div>  
+  <p>
+    Mein Blog befindet sich unter <a href="https://wp.codigo.at" target="_blank">https://wp.codigo.at</a>. Nachfolgend werden die zuletzt erstellten Einträge angezeigt.
+  </p>
   <div class="codigo__blog-list">
     <template repeat.for="post of posts">
       <div class="codigo__blog-item">
-        <h3>
-          <a href.bind="post.link" target="_blank">${post.title.rendered} vom ${post.date | dateToString}</a>
-        </h3>
+        <div class="codigo__blog-item__header">
+          <div class="codigo__blog-item__title">
+            <a href.bind="post.link" target="_blank">${post.title.rendered}</a>  
+          </div>
+          <div class="codigo__blog-item__date">
+            <i class="fas fa-clock"></i> ${post.date | dateToString}
+          </div>
+        </div>
         <div innerhtml.bind="post.content.rendered">
         </div>
       </div>

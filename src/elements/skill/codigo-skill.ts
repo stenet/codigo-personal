@@ -12,10 +12,15 @@ export class CodigoSkill {
 
   afterBind() {
     const multiplier = 10;
+    
+    const percentage = (this.level * multiplier)
+      .toString()
+      .concat("%");
+
+    const bgColor = this.getBackgroundColor();
 
     this.levelStyle = {
-      "width": `${this.level * multiplier}%`,
-      "background-color": this.getBackgroundColor()
+      "background": `linear-gradient(90deg, ${bgColor} 0%, ${bgColor} ${percentage}, white ${percentage})`
     };
   }
 

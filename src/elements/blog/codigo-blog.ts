@@ -22,32 +22,34 @@ export class CodigoBlog {
   }
   set search(value: string) {
     this._search = value;
-    this.resetLoad();
+    this.loadNextEntries(true);
   }
 
   afterBind() {
-    this.resetLoad();
+    this.loadNextEntries(true);
   }
 
   onLoadMoreClick() {
-    this.loadNextEntries();
+    this.loadNextEntries(false);
   }
 
-  private resetLoad() {
-    this._currentPage = 0;
-    this.posts = [];
-
-    this.loadNextEntries();
-  }
-  private async loadNextEntries() {
+  private async loadNextEntries(reset: boolean) {
     this.isLoading = true;
+
+    if (reset) {
+      this._currentPage = 0;
+    }
 
     try {
       const posts = await this._blogService.load(this._currentPage, this.PAGE_SIZE, this.search);
       this.showLoadMore = posts.length == this.PAGE_SIZE;
       this._currentPage++;
   
-      this.posts.push(...posts);
+      if (reset) {
+        this.posts = [...posts];
+      } else {
+        this.posts.push(...posts);
+      }
     } finally {
       this.isLoading = false;
     }

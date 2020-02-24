@@ -6,7 +6,7 @@ node {
     }
 
     stage('Build image') {
-        app = docker.build("stenet/codigo-personal")
+        app = docker.build("codigo-personal:${env.BUILD_ID}")
     }
 
     stage('Test image') {

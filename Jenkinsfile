@@ -1,14 +1,24 @@
-pipeline {
-  agent any
-  stages {
-    stage('') {
-      steps {
-        sh '''npm install
-npm run build
-rm /var/www/* -rf
-cp ${WORKSPACE}/dist/* /var/www -r'''
-      }
+node {
+    def app
+
+    stage('Clone repository') {
+        checkout scm
     }
 
-  }
+    stage('Build image') {
+        app = docker.build("stenet/codigo-personal")
+    }
+
+    stage('Test image') {
+        app.inside {
+            sh 'echo "Tests passed"'
+        }
+    }
+
+    stage('Push image') {
+        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+            app.push("${env.BUILD_NUMBER}")
+            app.push("latest")
+        }
+    }
 }

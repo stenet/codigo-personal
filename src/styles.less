@@ -1,17 +1,30 @@
+:root {
+  --font-header: "Montserrat";
+  --font-header-weight: 600;
+  --font-text: "Merriweather";
+  --background-color: #F8F8F8;
+  --background-container: #FEFEFE;
+  --color-red: #E25E5B;
+  --color-yellow: #F8CB30;
+  --color-green: #5BCF80;
+  --color-blue: #74BADE;
+  --color-text: #666;
+  --border-color: #ddd;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #F8F8F8;
+  background-color: var(--background-color);
   background-image: url("./resources/background.png");
-  font-family: 'Merriweather';
+  font-family: var(--font-text);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  font-family: 'Oswald';
-  font-weight: 400;
+  font-family: var(--font-header);
+  font-weight: var(--font-header-weight);
 }
 h1 {
   margin: 0;
@@ -19,29 +32,29 @@ h1 {
 p, li, figcaption {
   font-size: 0.9em;
   line-height: 1.6em;
-  color: #666;
+  color: var(--color-text);
 }
 button {
   appearance: none;
-  background-color: #efefef;
-  border: 1px solid #ddd;
-  font-family: 'Oswald';
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  font-family: var(--font-header);
   padding: 10px 20px;
   outline: none;
   cursor: pointer;
 
   &:hover {
-    background-color: #ddd;
+    background-color: var(--border-color);
   }
   &:active {
-    background-color: #efefef;
+    background-color: var(--background-color);
   }
 }
 input, textarea, select {
   appearance: none;
   padding: 5px 10px;
-  border: 1px solid #ddd;
-  color: #666;
+  border: 1px solid var(--border-color);
+  color: var(--color-text);
   border-radius: 6px;
   outline: none;
 }

@@ -7,11 +7,14 @@ export class BlogService {
     private _meService: MeService
   ) {}
 
-  async loadPosts(page: number, perPage: number, search: string): Promise<IPostResult> {
-    let url = `${this._meService.getInfo().wordpressUrl}/wp-json/wp/v2/posts?page=${page + 1}&per_page=${perPage}`;
+  async loadPosts(options: ILoadPostOptions): Promise<IPostResult> {
+    let url = `${this._meService.getInfo().wordpressUrl}/wp-json/wp/v2/posts?page=${options.page + 1}&per_page=${options.perPage}`;
 
-    if (search) {
-      url += "&search=".concat(encodeURIComponent(search));
+    if (options.search) {
+      url += "&search=".concat(encodeURIComponent(options.search));
+    }
+    if (options.tag) {
+      url += "&tags=".concat(options.tag.id.toString());
     }
 
     const result = await fetch(url);
@@ -22,7 +25,7 @@ export class BlogService {
     return {
       posts,
       totalPosts,
-      loadedPosts: (page * perPage) + posts.length
+      loadedPosts: (options.page * options.perPage) + posts.length
     };
   }
   async loadTags(): Promise<ITagResult> {
@@ -55,6 +58,12 @@ export class BlogService {
   }
 }
 
+export interface ILoadPostOptions {
+  page: number;
+  perPage: number;
+  search: string;
+  tag: ITag;
+}
 export interface IPostResult {
   posts: IPost[];
   loadedPosts: number;

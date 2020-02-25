@@ -26,11 +26,11 @@ export class CodigoSkill {
 
   private getBackgroundColor() {
     if (this.level < this.MIN) {
-      return "#E25E5B";
+      return "var(--color-red)";
     } else if (this.level < this.MEDIUM) {
-      return "#F8CB30";
+      return "var(--color-yellow)";
     } else {
-      return "#5BCF80";
+      return "var(--color-green)";
     }
   }
 }

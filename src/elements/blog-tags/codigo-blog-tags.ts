@@ -1,4 +1,4 @@
-import { inject } from "aurelia";
+import { inject, bindable, BindingMode } from "aurelia";
 import { BlogService, ITagResult, ITag } from "../../services/blog-service";
 
 @inject()
@@ -10,8 +10,16 @@ export class CodigoBlogTags {
   tagResult: ITagResult;
   tags: ITag[];
 
+  @bindable({mode: BindingMode.twoWay}) selectedTag: ITag;
+
   afterBind() {
     this.loadTags();
+  }
+
+  onTagClick(tag: ITag) {
+    this.selectedTag = this.selectedTag == tag
+      ? null
+      : tag;
   }
 
   private async loadTags() {

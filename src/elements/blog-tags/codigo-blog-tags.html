@@ -4,7 +4,11 @@
   <h3>Schlagwörter</h3>
   <div class="codigo__tag-list">
     <template repeat.for="tag of tags">
-      <codigo-tag text.bind="tag.name" size.bind="tag.size"></codigo-tag>
+      <codigo-tag 
+        text.bind="tag.name" 
+        size.bind="tag.size" 
+        background-color="${$parent.selectedTag == tag ? 'var(--color-yellow)' : ''}"
+        click.delegate="onTagClick(tag)"></codigo-tag>
     </template>
   </div>
 </template>

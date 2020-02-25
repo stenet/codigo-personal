@@ -7,11 +7,14 @@
     </h2>
     <input placeholder="Suchen ..." value.bind="search & debounce:600" />
   </div>  
+  <p>
+    Mein Blog befindet sich unter <a href="https://wp.codigo.at" target="_blank">https://wp.codigo.at</a>. Nachfolgend werden die zuletzt erstellten Einträge angezeigt.
+  </p>
   <p if.bind="postResult">
-    Mein Blog befindet sich unter <a href="https://wp.codigo.at" target="_blank">https://wp.codigo.at</a> und hat aktuell ${postResult.totalPosts} Beiträge. Nachfolgend werden die zuletzt erstellten Einträge angezeigt.
+    Die Suche ergab ${postResult.totalPosts} Beiträge.
   </p>
   <div>
-    <codigo-blog-tags></codigo-blog-tags>
+    <codigo-blog-tags selected-tag.bind="selectedTag"></codigo-blog-tags>
   </div>
   <div class="codigo__blog-list">
     <template repeat.for="post of posts">

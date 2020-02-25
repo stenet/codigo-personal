@@ -5,14 +5,14 @@ codigo-container {
   padding: 40px 25px;
   width: 100%;
   max-width: 900px;
-  background: #fefefe;
+  background-color: var(--background-container);
   box-shadow: 0 0 10px 0 #aaa;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
 
   > * + *::before {
     display: block;
     content: "";
-    border-top: 1px dashed #ddd;
+    border-top: 1px dashed var(--border-color);
     margin-top: 25px;
     padding-top: 25px;
   }

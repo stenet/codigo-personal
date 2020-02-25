@@ -1,5 +1,5 @@
 import { inject } from "aurelia";
-import { BlogService } from "../../services/blog-service";
+import { BlogService, IPostResult } from "../../services/blog-service";
 
 @inject()
 export class CodigoBlog {
@@ -12,6 +12,7 @@ export class CodigoBlog {
     private _blogService: BlogService
   ) {}
 
+  postResult: IPostResult;
   posts: any[];
 
   isLoading: boolean;
@@ -41,14 +42,14 @@ export class CodigoBlog {
     }
 
     try {
-      const posts = await this._blogService.load(this._currentPage, this.PAGE_SIZE, this.search);
-      this.showLoadMore = posts.length == this.PAGE_SIZE;
+      this.postResult = await this._blogService.loadPosts(this._currentPage, this.PAGE_SIZE, this.search);
+      this.showLoadMore = this.postResult.totalPosts > this.postResult.loadedPosts;
       this._currentPage++;
   
       if (reset) {
-        this.posts = [...posts];
+        this.posts = [...this.postResult.posts];
       } else {
-        this.posts.push(...posts);
+        this.posts.push(...this.postResult.posts);
       }
     } finally {
       this.isLoading = false;

@@ -4,4 +4,5 @@ import { inject, bindable } from "aurelia";
 export class CodigoTag {
   @bindable text: string;
   @bindable backgroundColor: string;
+  @bindable size: string = "m";
 }

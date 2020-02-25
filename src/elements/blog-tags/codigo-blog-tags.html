@@ -1,0 +1,10 @@
+<template>
+  <import from="../tag/codigo-tag"></import>
+
+  <h3>Schlagwörter</h3>
+  <div class="codigo__tag-list">
+    <template repeat.for="tag of tags">
+      <codigo-tag text.bind="tag.name" size.bind="tag.size"></codigo-tag>
+    </template>
+  </div>
+</template>

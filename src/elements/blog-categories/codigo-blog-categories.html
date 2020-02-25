@@ -1,0 +1,13 @@
+<template>
+  <import from="../tag/codigo-tag"></import>
+
+  <h3>Kategorien</h3>
+  <div class="codigo__tag-list">
+    <template repeat.for="category of categories">
+      <codigo-tag 
+        text.bind="category.name"  
+        background-color="${$parent.selectedCategory == category ? 'var(--color-yellow)' : ''}"
+        click.delegate="onCategoryClick(category)"></codigo-tag>
+    </template>
+  </div>
+</template>

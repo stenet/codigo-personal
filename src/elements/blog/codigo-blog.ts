@@ -1,6 +1,5 @@
-import { ITag } from "./../../services/blog-service";
 import { inject } from "aurelia";
-import { BlogService, IPostResult } from "../../services/blog-service";
+import { BlogService, IPostResult, ITag, ICategory } from "../../services/blog-service";
 
 @inject()
 export class CodigoBlog {
@@ -9,6 +8,7 @@ export class CodigoBlog {
   private _currentPage: number;
   private _search: string;
   private _selectedTag: ITag;
+  private _selectedCategory: ICategory;
 
   constructor(
     private _blogService: BlogService
@@ -36,6 +36,14 @@ export class CodigoBlog {
     this.loadNextEntries(true);
   }
 
+  get selectedCategory(): ICategory {
+    return this._selectedCategory;
+  }
+  set selectedCategory(value: ICategory) {
+    this._selectedCategory = value;
+    this.loadNextEntries(true);
+  }
+
   afterBind() {
     this.loadNextEntries(true);
   }
@@ -56,7 +64,8 @@ export class CodigoBlog {
         page: this._currentPage,
         perPage: this.PAGE_SIZE,
         search: this.search,
-        tag: this.selectedTag
+        tag: this.selectedTag,
+        category: this.selectedCategory
       });
 
       this.showLoadMore = this.postResult.totalPosts > this.postResult.loadedPosts;

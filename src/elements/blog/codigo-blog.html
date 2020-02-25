@@ -1,5 +1,6 @@
 <template>
   <import from="../blog-tags/codigo-blog-tags"></import>
+  <import from="../blog-categories/codigo-blog-categories"></import>
 
   <div class="codigo__blog-header">
     <h2>
@@ -10,9 +11,15 @@
   <p>
     Mein Blog befindet sich unter <a href="https://wp.codigo.at" target="_blank">https://wp.codigo.at</a>. Nachfolgend werden die zuletzt erstellten Einträge angezeigt.
   </p>
-  <p if.bind="postResult">
+  <p if.bind="postResult && !isLoading">
     Die Suche ergab ${postResult.totalPosts} Beiträge.
   </p>
+  <p if.bind="isLoading">
+    Daten werden geladen
+  </p>
+  <div>
+    <codigo-blog-categories selected-category.bind="selectedCategory"></codigo-blog-categories>
+  </div>
   <div>
     <codigo-blog-tags selected-tag.bind="selectedTag"></codigo-blog-tags>
   </div>

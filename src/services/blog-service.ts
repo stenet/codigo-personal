@@ -16,6 +16,9 @@ export class BlogService {
     if (options.tag) {
       url += "&tags=".concat(options.tag.id.toString());
     }
+    if (options.category) {
+      url += "&categories=".concat(options.category.id.toString());
+    }
 
     const result = await fetch(url);
     const posts: IPost[] = await result.json();
@@ -63,6 +66,7 @@ export interface ILoadPostOptions {
   perPage: number;
   search: string;
   tag: ITag;
+  category: ICategory;
 }
 export interface IPostResult {
   posts: IPost[];

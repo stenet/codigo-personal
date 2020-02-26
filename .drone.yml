@@ -4,6 +4,7 @@ name: default
 
 steps:
 - name: test
-  image: alpine
+  image: node
   commands:
-  - echo hello world
+  - npm install
+  - npm run build

@@ -13,10 +13,12 @@ steps:
       - npm run build
       - rm /var/www/* -rf
       - cp ./dist/* /var/www -r
-    when:
-      event: tag
 
 volumes:
   - name: www
     host:
       path: /media/stefan/nginx/www
+
+trigger:
+  event:
+    - tag

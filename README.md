@@ -1,14 +1,5 @@
 # codigo-personal
 
-This project is bootstrapped by [aurelia/new](https://github.com/aurelia/new).
+[![Build Status](https://drone.codigo.at/api/badges/stenet/codigo-personal/status.svg)](https://drone.codigo.at/stenet/codigo-personal)
 
-## Start dev web server
-
-    npm start
-
-## Build the app
-
-Build files to dist folder.
-
-    npm run build
-
+Real world example for using Aurelia 2. CI/CD powered by drone.io.

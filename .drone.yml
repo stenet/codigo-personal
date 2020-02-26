@@ -3,18 +3,20 @@ type: docker
 name: default
 
 steps:
-- name: frontend
-  image: node
-  volumes:
-    - name: www
-      path: /var/www
-  commands:
-  - npm install
-  - npm run build
-  - rm /var/www/* -rf
-  - cp ./dist/* /var/www -r
+  - name: frontend
+    image: node
+    volumes:
+      - name: www
+        path: /var/www
+    commands:
+      - npm install
+      - npm run build
+      - rm /var/www/* -rf
+      - cp ./dist/* /var/www -r
+    when:
+      event: tag
 
 volumes:
-- name: www
-  host:
-    path: /media/stefan/nginx/www
+  - name: www
+    host:
+      path: /media/stefan/nginx/www

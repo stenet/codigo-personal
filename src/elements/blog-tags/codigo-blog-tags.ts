@@ -10,7 +10,7 @@ export class CodigoBlogTags {
   tagResult: ITagResult;
   tags: ITag[];
 
-  @bindable({mode: BindingMode.twoWay}) selectedTag: ITag;
+  @bindable({mode: BindingMode.twoWay}) selectedTag: ITag = null;
 
   afterBind() {
     this.loadTags();

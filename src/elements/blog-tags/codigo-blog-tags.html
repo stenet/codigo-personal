@@ -7,7 +7,7 @@
       <codigo-tag 
         text.bind="tag.name" 
         size.bind="tag.size" 
-        background-color="${$parent.selectedTag == tag ? 'var(--color-yellow)' : ''}"
+        background-color="${selectedTag == tag ? 'var(--color-yellow)' : ''}"
         click.delegate="onTagClick(tag)"></codigo-tag>
     </template>
   </div>

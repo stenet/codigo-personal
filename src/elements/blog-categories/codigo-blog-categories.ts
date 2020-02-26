@@ -10,7 +10,7 @@ export class CodigoBlogCategories {
   categoryResult: ICategoryResult;
   categories: ICategory[];
 
-  @bindable({mode: BindingMode.twoWay}) selectedCategory: ICategory;
+  @bindable({mode: BindingMode.twoWay}) selectedCategory: ICategory = null;
 
   afterBind() {
     this.loadCategories();

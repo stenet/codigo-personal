@@ -28,6 +28,8 @@
     { "name": "Aurelia", "level": 10 },
     { "name": "SQL-Server", "level": 8 },
     { "name": "Oracle", "level": 6 },
+    { "name": "HTML5", "level": 10 },
+    { "name": "CSS", "level": 10 },
     { "name": "JavaScript/TypeScript", "level": 8 },
     { "name": "Azure", "level": 8 },
     { "name": "Docker", "level": 8 },
@@ -39,7 +41,7 @@
     { "name": "Clean Coding", "level": 10 },
     { "name": "Git", "level": 8 },
     { "name": "Linux", "level": 5 },
-    { "name": "drone.io", "level": 6 }
+    { "name": "drone.io", "level": 8 }
   ],
   "socials": [
     { "name": "Linkedin", "url": "https://www.linkedin.com/in/stefan-heim-61834612/", "icon": "fab fa-linkedin" },

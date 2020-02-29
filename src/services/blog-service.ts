@@ -46,7 +46,7 @@ export class BlogService {
     };
   }
   async loadCategories(): Promise<ICategoryResult> {
-    const url = `${this._meService.getInfo().wordpressUrl}/wp-json/wp/v2/categories?per_page=100&orderby=description&order=asc`;
+    const url = `${this._meService.getInfo().wordpressUrl}/wp-json/wp/v2/categories?per_page=100&orderby=name&order=asc`;
 
     const result = await fetch(url);
     const categories: ICategory[] = await result.json();

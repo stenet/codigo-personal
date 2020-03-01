@@ -3,15 +3,17 @@
   <import from="../tag/codigo-tag"></import>
 
   <div class="codigo-header">
-    <div class="codigo-header__image"></div>
-    <h1>codigo</h1>
-    <p>
-      Persönliche Seite und Blog von Stefan Heim.
-    </p>
-    <div class="codigo__tag-list">
-      <codigo-tag text.bind="info.profession" background-color="var(--color-green)"></codigo-tag>
-      <codigo-tag text.bind="info.country" background-color="var(--color-blue)"></codigo-tag>
+    <div class="codigo-header__content">
+      <h1>codigo</h1>
+      <p>
+        Persönliche Seite und Blog von Stefan Heim.
+      </p>
+      <div class="codigo__tag-list">
+        <codigo-tag text.bind="info.profession" background-color="var(--color-green)"></codigo-tag>
+        <codigo-tag text.bind="info.country" background-color="var(--color-blue)"></codigo-tag>
+      </div>
     </div>
+    <div class="codigo-header__image"></div>
   </div>
   <div>
     <p>

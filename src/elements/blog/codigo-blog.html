@@ -3,7 +3,7 @@
   <import from="../blog-categories/codigo-blog-categories"></import>
 
   <div class="codigo__blog-header">
-    <h2>
+    <h2 id="blog">
       Blog
     </h2>
     <input placeholder="Suchen ..." value.bind="search & debounce:600" />
@@ -31,7 +31,7 @@
             <a href.bind="post.link" target="_blank">${post.title.rendered}</a>  
           </div>
           <div class="codigo__blog-item__date">
-            <i class="fas fa-clock"></i> ${post.date | dateToString}
+            Erstellt am ${post.date | dateToString}
           </div>
         </div>
         <div innerhtml.bind="post.content.rendered">

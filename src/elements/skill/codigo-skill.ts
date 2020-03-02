@@ -20,7 +20,8 @@ export class CodigoSkill {
     const bgColor = this.getBackgroundColor();
 
     this.levelStyle = {
-      "background": `linear-gradient(90deg, ${bgColor} 0%, ${bgColor} ${percentage}, white ${percentage})`
+      "background": `linear-gradient(90deg, ${bgColor} 0%, ${bgColor} ${percentage}, white ${percentage})`,
+      "border-color": bgColor
     };
   }
 

@@ -8,7 +8,8 @@
   },
   "license": "UNLICENSED",
   "dependencies": {
-    "aurelia": "dev"
+    "aurelia": "dev",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
     "@aurelia/webpack-loader": "dev",

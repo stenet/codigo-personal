@@ -10,6 +10,7 @@ export class CodigoNav {
     const hash = target.hash;
 
     if (!hash) {
+      window.scrollTo({top: 0, behavior: "smooth"});
       return;
     }
 

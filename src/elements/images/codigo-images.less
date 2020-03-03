@@ -1,0 +1,24 @@
+.codigo-image {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;   
+  background-origin: content-box;
+  transition: opacity 600ms ease-in-out, transform 600ms ease-in-out;
+  opacity: 0;
+  transform: scale(0.9);
+
+  &.show {
+    opacity: 1;
+    transform: scale(1);
+
+    &.hide {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+  }
+}

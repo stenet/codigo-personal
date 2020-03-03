@@ -1,3 +1,8 @@
 <template>
-  <i class="fas fa-bars"></i> <a href="#intro">Intro</a> | <a href="#social">Social</a> | <a href="#attribute">Attribute</a> | <a href="#skills">Skills</a> | <a href="#blog">Blog</a>
+  <i class="fas fa-bars"></i>
+  <a href="#intro" click.delegate="onNavItemClick($event)">Intro</a> | 
+  <a href="#social" click.delegate="onNavItemClick($event)">Social</a> | 
+  <a href="#attribute" click.delegate="onNavItemClick($event)">Attribute</a> | 
+  <a href="#skills" click.delegate="onNavItemClick($event)">Skills</a> | 
+  <a href="#blog" click.delegate="onNavItemClick($event)">Blog</a>
 </template>

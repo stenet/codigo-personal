@@ -1,4 +1,4 @@
-import { inject } from "aurelia";
+import { inject, IScheduler } from "aurelia";
 import { BlogService, IPostResult, ITag, ICategory } from "../../services/blog-service";
 
 @inject()
@@ -11,7 +11,9 @@ export class CodigoBlog {
   private _selectedCategory: ICategory;
 
   constructor(
-    private _blogService: BlogService
+    private _element: Element,
+    private _blogService: BlogService,
+    @IScheduler private _scheduler: IScheduler
   ) {}
 
   postResult: IPostResult;
@@ -52,6 +54,19 @@ export class CodigoBlog {
     this.loadNextEntries(false);
   }
 
+  private isSafari() {
+    const agent = navigator.userAgent.toLowerCase(); 
+    
+    if (agent.indexOf("safari") < 0) {
+      return false;
+    }
+    
+    if (agent.indexOf("chrome") >= 0) {
+      return false;
+    }
+
+    return true;
+  }
   private async loadNextEntries(reset: boolean) {
     this.isLoading = true;
 
@@ -76,8 +91,21 @@ export class CodigoBlog {
       } else {
         this.posts.push(...this.postResult.posts);
       }
+
+      this.scheduleSafariSrcsetFix();
     } finally {
       this.isLoading = false;
     }
+  }
+
+  private scheduleSafariSrcsetFix() {
+    if (!this.isSafari()) {
+      return;
+    }
+
+    this._scheduler.queuePostRenderTask(() => {
+      const images = this._element.querySelectorAll("img[srcset][src]");
+      images.forEach((image: HTMLImageElement) => image.src += "");
+    });
   }
 }

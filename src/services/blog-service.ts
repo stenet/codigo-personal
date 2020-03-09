@@ -32,7 +32,7 @@ export class BlogService {
     };
   }
   async loadTags(): Promise<ITagResult> {
-    const url = `${this._meService.getInfo().wordpressUrl}/wp-json/wp/v2/tags?per_page=25&orderby=count&order=desc`;
+    const url = `${this._meService.getInfo().wordpressUrl}/wp-json/wp/v2/tags?per_page=50&orderby=count&order=desc`;
 
     const result = await fetch(url);
     const tags: ITag[] = await result.json();

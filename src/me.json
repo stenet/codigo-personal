@@ -43,7 +43,8 @@
     { "name": "Linux", "level": 5 },
     { "name": "drone.io", "level": 8 },
     { "name": "Redis", "level": 9 },
-    { "name": "Depencendy Injection", "level": 8 }
+    { "name": "Depencendy Injection", "level": 8 },
+    { "name": "Unit Testing", "level": 7 }
   ],
   "socials": [
     { "name": "Linkedin", "url": "https://www.linkedin.com/in/stefan-heim-61834612/", "icon": "fab fa-linkedin" },

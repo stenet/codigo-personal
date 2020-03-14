@@ -39,6 +39,22 @@
   + .codigo__blog-item {
     margin-top: 50px;
   }
+
+  blockquote {
+    position: relative;
+    margin-left: 40px;
+
+    &:before {
+      position: absolute;
+      left: -40px;
+      top: 0;
+      font-family: "Font Awesome 5 Pro";
+      font-weight: bold;
+      content: "\f10e";
+      font-size: 2em;
+      color: var(--color-text);
+    }
+  }
 }
 .codigo__blog-header {
   display: flex;

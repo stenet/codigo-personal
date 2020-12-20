@@ -41,10 +41,11 @@
     { "name": "Clean Coding", "level": 10 },
     { "name": "Git", "level": 8 },
     { "name": "Linux", "level": 5 },
+    { "name": "Nginx", "level": 8 },
     { "name": "drone.io", "level": 8 },
     { "name": "Redis", "level": 9 },
     { "name": "Depencendy Injection", "level": 8 },
-    { "name": "Unit Testing", "level": 7 }
+    { "name": "Unit Testing", "level": 8 }
   ],
   "socials": [
     { "name": "Linkedin", "url": "https://www.linkedin.com/in/stefan-heim-61834612/", "icon": "fab fa-linkedin" },
